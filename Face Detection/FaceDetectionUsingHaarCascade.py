@@ -4,10 +4,10 @@
 
 import cv2
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('../Models/haarcascade_frontalface_default.xml')
 
 # Read the input image
-img = cv2.imread('./images/avenger_5.jpg')
+img = cv2.imread('../images/avenger_5.jpg')
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray, 1.1, 4)
