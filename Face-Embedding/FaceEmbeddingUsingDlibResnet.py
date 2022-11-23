@@ -3,11 +3,11 @@ import numpy as np
 import dlib
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-face_encoder = dlib.face_recognition_model_v1("dlib_face_recognition_resnet_model_v1.dat")
+predictor = dlib.shape_predictor("../Models/shape_predictor_68_face_landmarks.dat")
+face_encoder = dlib.face_recognition_model_v1("../Models/dlib_face_recognition_resnet_model_v1.dat")
 
 # Read the Input Image
-img = cv2.imread('./images/group-people.jpg')
+img = cv2.imread('../images/group-people.jpg')
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

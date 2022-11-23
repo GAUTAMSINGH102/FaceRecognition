@@ -10,7 +10,7 @@ import dlib
 import cv2
 
 # step1: read the image
-image = cv2.imread("./images/avenger_5.jpg")
+image = cv2.imread("../images/avenger_5.jpg")
 
 # step2: converts to gray image
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

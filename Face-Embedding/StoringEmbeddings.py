@@ -6,8 +6,8 @@ import pickle
 import pandas as pd
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-face_encoder = dlib.face_recognition_model_v1("dlib_face_recognition_resnet_model_v1.dat")
+predictor = dlib.shape_predictor("../Models/shape_predictor_68_face_landmarks.dat")
+face_encoder = dlib.face_recognition_model_v1("../Models/dlib_face_recognition_resnet_model_v1.dat")
 directory = 'delete'
 
 list_of_face_embedding = []

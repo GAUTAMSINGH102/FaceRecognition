@@ -2,14 +2,14 @@ import cv2
 import numpy as np
 
 #step1:Read model and prototxt file
-caffeModelFile = "./face_detector/res10_300x300_ssd_iter_140000.caffemodel"
-caffeProtoTxt = "./face_detector/deploy.prototxt"
+caffeModelFile = "../Models/face_detector/res10_300x300_ssd_iter_140000.caffemodel"
+caffeProtoTxt = "../Models/face_detector/deploy.prototxt"
 
 #step2:Create a readNet object from the caffemodel
 caffeDetector = cv2.dnn.readNetFromCaffe(caffeProtoTxt, caffeModelFile)
 
 #step3: read the input image
-image = cv2.imread("./images/avenger_5.jpg")
+image = cv2.imread("../images/avenger_5.jpg")
 (h, w) = image.shape[:2] #get image height and width
 
 #step4: convert image to blob

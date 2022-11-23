@@ -2,17 +2,17 @@ import cv2
 import numpy as np
 import dlib
 
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("../Models/shape_predictor_68_face_landmarks.dat")
 
 #step1:Read model and prototxt file
-caffeModelFile = "./face_detector/res10_300x300_ssd_iter_140000.caffemodel"
-caffeProtoTxt = "./face_detector/deploy.prototxt"
+caffeModelFile = "../Models/face_detector/res10_300x300_ssd_iter_140000.caffemodel"
+caffeProtoTxt = "../Models/face_detector/deploy.prototxt"
 
 #step2:Create a readNet object from the caffemodel
 caffeDetector = cv2.dnn.readNetFromCaffe(caffeProtoTxt, caffeModelFile)
 
 # Read the Input Image
-img = cv2.imread('./images/group-people.jpg')
+img = cv2.imread('../images/group-people.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 (h, w) = img.shape[:2] #get image height and width
